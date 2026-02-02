@@ -237,13 +237,15 @@ export const AdminDashboard: React.FC<Props> = ({ onNavigate, settings, onUpdate
             Logout
           </button>
         </div>
-      </div>
+          </div>
   );
 };
 
+// Wrapper Component to fix naming conflict
 export const AdminDashboard: React.FC<Props> = (props) => {
   return <AdminDashboardInner {...props} />;
 };
+
 
 const AdminDashboardInner: React.FC<Props> = ({ onNavigate, settings, onUpdateSettings, onImpersonate, logActivity, isDarkMode, onToggleDarkMode }) => {
 
